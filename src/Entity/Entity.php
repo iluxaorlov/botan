@@ -42,8 +42,7 @@ abstract class Entity
     private function normalize(string $property): string
     {
         $property = preg_replace('/.+_id/', 'id', $property);
-        $property = str_replace('_', '', lcfirst(ucwords($property, '_')));
 
-        return $property;
+        return str_replace('_', '', lcfirst(ucwords($property, '_')));
     }
 }
